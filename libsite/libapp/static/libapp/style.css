@@ -1,0 +1,143 @@
+
+h1 {
+	color: #010105;
+    font-family: 'Lobster', cursive;
+}
+
+.colorAction{
+	background-color: black;
+}
+
+
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}
+
+
+
+
+/*
+   Lab2
+   Web Form Style Sheet
+   Author: Group 3
+   Date:   5/10th/2016
+
+*/
+
+
+body {
+    padding: 40px;
+    padding-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../../static/libapp/images/backimg.jpg");
+    background-color: #c7e6ff;
+    margin: 0px
+
+
+}
+
+header {
+    font-family: 'Lobster', cursive;
+    /*background-color: #fff;
+    padding: 20px;*/
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: auto;
+
+}
+
+.navber {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+ }
+
+ header.navbar {
+        background-color: #fff;
+    }
+
+header.navbar-header {width:1200px;height:200px;
+    margin-bottom: 0px;;
+}
+
+footer {
+     font-style: italic; text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;font-style: italic;
+}
+
+h2 {
+    color:cornflowerblue;
+}
+
+
+/*register.html*/
+span {color: red;
+    }
+
+/* index.html*/
+.activity-section {
+    margin:50px;
+    text-align:center;
+}
+
+.activity-element img {
+    width:150px;
+    height:150px;
+}
+
+
+#bs-example-navbar-collapse-1 {
+
+    background-color: rgb(215, 205, 151);
+    width: 1200px;
+    height:50px;
+     margin: 0px ;
+    text-align: right;
+}
+
+
+
+/*form*/
+#firstName, #lastName, #email{width: 25em}
+
+button {
+    position: relative;
+    left: 400px;
+}
+
+/*about*/
+ul.small{
+    font-weight: 600;    margin-left: 20px; font-style: italic
+}
+
+#period {
+    color: maroon;
+    margin-left: 40px;
+    font-weight:800;
+    font-style: italic;
+}
+
+table.schedule  {border:10px outset rgb(100, 76, 4);
+                 border-collapse: collapse; font-family:
+                 Arial, Helvetica, sans-serif; font-size:0.9em; width:50%
+}
+
+table.schedule th, table.schedule td {border:1px solid gray;font-family:Arial; text-align: center}
+
+table.schedule thead  {color:white;background-color: rgb(126, 102, 3)
+}
+
+table.schedule col.firstCol{width:7%}
+
+table.schedule col.dayCols{width:13%}
+
+table.schedule thead tr{height:20px; text-align: center}
+
+table.schedule tbody tr{height:30px; text-align: center}
+
+table.schedule tbody td{ padding:5px}
+
+table.schedule caption{caption-side: top; text-align:right}

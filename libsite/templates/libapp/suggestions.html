@@ -1,0 +1,20 @@
+{% extends 'libapp/base.html' %}
+{% block body_block %}
+{% if itemlist %}
+        <h2>List of Suggestion</h2>
+        <ol>
+            {% for item in itemlist %}
+{#                <li>{{ item.get_type_display}}:  {{ item }}</li>#}
+
+                <li> Type:{{ item.get_type_display}} &nbsp;&nbsp;&nbsp;
+                     Title: {{ item.title }} &nbsp;&nbsp;&nbsp;
+                     Cost:{{ item.cost}}</li>
+
+            {% endfor %}
+        </ol>
+
+    {% else %}
+        <strong>There are no available items!</strong>
+    {% endif %}
+
+{% endblock %}

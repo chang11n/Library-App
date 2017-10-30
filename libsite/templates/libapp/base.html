@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+{% load staticfiles %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<html>
+
+
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'libapp/style.css' %}" />
+        <title>MAC Library APP - {% block title %}Welcome!{% endblock %}</title>
+        <link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script src="{{STATIC_URL}} libapp/Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'libapp/Content/animate.css' %}"/>
+        <script type="text/javascript" src="{{ STATIC_URL }} libapp/Scripts/wow.min.js"></script>
+
+        <script src="{% static 'libapp/Scripts/bootstrap.min.js' %}"></script>
+
+{#<!-- Latest compiled and minified CSS -->#}
+{#<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"#}
+{#      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">#}
+
+<!-- Optional theme -->
+<link rel="stylesheet" href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css'
+      integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymousz">
+
+
+    </head>
+
+    <body>
+
+    <header>
+{#  NavBar------------------------------#}
+          <div class="container-fluid">
+              <div class="navbar-header">
+                     <img  src="{% static 'libapp/images/banner.jpg' %}" alt="library" style = "width:1200px;height:200px"/>
+              </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navb ar-collapse" id="bs-example-navbar-collapse-1" >
+                    <nav class="nav navbar-nav navbar-right">
+
+                        <a href = "{% url 'libapp:index' %}">Home</a>
+                        <a href="/libapp/about">About</a></li>
+                        <a href="/libapp/searchlib">Search Books</a>
+                        <a href="/libapp/suggestions">View Suggestions</a>
+                        {% if request.user.is_authenticated%}
+                            <a href = "{% url 'libapp:logout' %}"> logout</a>
+                            <a href = "{% url 'libapp:myitems' %}">My Account</a>
+                        {% else %}
+                            <a href = "{% url 'libapp:login' %}"> login</a>
+                            <a href = "{% url 'libapp:register' %}">Register</a>
+                        {% endif %}
+                    </nav>
+                </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+
+
+    </header>
+
+
+       <body>
+        <div>
+            <h1>{% block myhdg %}Hello {{ user.first_name }}{% endblock %}</h1>
+            {% block body_block %}*** {% endblock %}
+        </div>
+
+{#        <div>#}
+{#            <ul>#}
+{#                <li class="hbar1"><a href="/libapp/about">Find out about this site</a><br/></li>#}
+{#                <li class="hbar1"><a href = "{% url 'libapp:index' %}">Click here to return to main page</a><br/></li>#}
+{#                <li class="hbar1"><a href="/libapp/suggestions">Views your suggestions here</a><br/></li>#}
+{#                <li class="hbar1"><a href="/libapp/searchlib">Search specific books</a><br/></li>#}
+{#                <li class="hbar1"><a href="{% url 'libapp:newitem' %}">Suggestion for Newitem</a></li>#}
+{##}
+{#                {% if request.user.is_authenticated%}#}
+{#                    <li class="hbar1"><a href = "{% url 'libapp:logout' %}">Click here to logout</a><br/></li>#}
+{#                    <li class="hbar1"><a href = "{% url 'libapp:myitems' %}">View my items</a><br/></li>#}
+{#                {% else %}#}
+{#                     <li class="hbar1"><a href = "{% url 'libapp:login' %}">Click here to login</a><br/></li>#}
+{#                    <li class="hbar1"><a href = "{% url 'libapp:register' %}">Click here to register</a><br/></li>#}
+{#                {% endif %}#}
+{#            </ul>#}
+{#        </div>#}
+
+       <hr />
+<footer>  Created by Mac program 60-634-52 Group3 2016</footer>
+       <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </body>
+
+
+</html>
